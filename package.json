@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "This project was bootstrapped with Fastify-CLI.",
   "main": "app.js",
+  "type": "module",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "node --test test/**/*.test.js",
     "start": "fastify start -l info app.js",
-    "dev": "fastify start -w -l info -P app.js",
+    "dev": "fastify start -w -l info -P src/app.js",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix"
   },
@@ -20,6 +21,7 @@
     "@fastify/autoload": "^6.0.0",
     "@fastify/env": "^5.0.2",
     "@fastify/sensible": "^6.0.3",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.5.0",
     "fastify": "^5.0.0",
     "fastify-cli": "^7.4.0",
