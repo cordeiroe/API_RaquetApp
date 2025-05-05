@@ -20,10 +20,11 @@
   "dependencies": {
     "@fastify/autoload": "^6.0.0",
     "@fastify/env": "^5.0.2",
+    "@fastify/mongodb": "^9.0.2",
     "@fastify/sensible": "^6.0.3",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.5.0",
-    "fastify": "^5.0.0",
+    "fastify": "^4.29.1",
     "fastify-cli": "^7.4.0",
     "fastify-cors": "^6.0.3",
     "fastify-jwt": "^4.1.3",
