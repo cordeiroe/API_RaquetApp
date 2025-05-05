@@ -1,9 +1,9 @@
-export default {
+module.exports = {
 	env: {
 		node: true,
 		es2021: true
 	},
-	extends: 'standard',
+	extends: ['standard'],
 	overrides: [],
 	parserOptions: {
 		ecmaVersion: 'latest',
@@ -17,6 +17,6 @@ export default {
 		'comma-dangle': ['error', 'never'],
 		'no-unused-vars': 'warn',
 		'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-		'space-before-function-paren': ['error', 'never']
+		'space-before-function-paren': ['error', 'always']
 	}
 }

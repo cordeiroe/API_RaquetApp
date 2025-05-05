@@ -1,10 +1,8 @@
-'use strict'
-
 const { test } = require('node:test')
 const assert = require('node:assert')
 const { build } = require('../helper')
 
-test('default root route', async(t) => {
+test('default root route', async (t) => {
 	const app = await build(t)
 
 	const res = await app.inject({

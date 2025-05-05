@@ -1,4 +1,3 @@
-'use strict'
 import bcrypt from 'bcrypt'
 
 const users = []
@@ -10,11 +9,13 @@ const generateId = () => {
 	return String(lastId)
 }
 
-const createUser = async(request, reply) => {
+const createUser = async (request, reply) => {
 	try {
-		const { name, email, password, role } = request.body
+		const {
+			name, email, password, role
+		} = request.body
 
-		const existUser = users.find(user => user.email === email)
+		const existUser = users.find((user) => user.email === email)
 
 		if (existUser) {
 			return reply.code(409).send({
@@ -56,7 +57,7 @@ const createUser = async(request, reply) => {
 	}
 }
 
-const getUsers = async(request, reply) => {
+const getUsers = async (request, reply) => {
 	try {
 		const { page = 1, limit = 10 } = request.query
 
@@ -65,7 +66,7 @@ const getUsers = async(request, reply) => {
 
 		const paginatedUsers = users.slice(startIndex, endIndex)
 
-		const mappedUsers = paginatedUsers.map(user => ({
+		const mappedUsers = paginatedUsers.map((user) => ({
 			id: user.id,
 			name: user.name,
 			email: user.email,

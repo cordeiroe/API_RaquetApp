@@ -1,6 +1,6 @@
 import connectToMongoDB from '../src/config/database.js'
 
-async function testDbConnection() {
+async function testDbConnection () {
 	try {
 		await connectToMongoDB()
 		console.log('Test connection successful')

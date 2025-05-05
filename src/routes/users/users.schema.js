@@ -1,4 +1,3 @@
-'use strict'
 const errorResponse = {
 	type: 'object',
 	properties: {
@@ -14,9 +13,13 @@ const userSchema = {
 			type: 'object',
 			required: ['name', 'email', 'password', 'role'],
 			properties: {
-				name: { type: 'string', minLength: 3, maxLength: 100, description: 'Nome completo do usuário' },
+				name: {
+					type: 'string', minLength: 3, maxLength: 100, description: 'Nome completo do usuário'
+				},
 				email: { type: 'string', format: 'email', description: 'Email do usuário' },
-				password: { type: 'string', minLength: 8, description: 'Senha do usuário', pattern: '^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$' },
+				password: {
+					type: 'string', minLength: 8, description: 'Senha do usuário', pattern: '^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$'
+				},
 				role: { type: 'string', enum: ['student', 'teacher', 'admin'], description: 'Papel do usuário' }
 			}
 		},
@@ -63,8 +66,12 @@ const userSchema = {
 		query: {
 			type: 'object',
 			properties: {
-				page: { type: 'number', default: 1, minimum: 1, description: 'Página atual' },
-				limit: { type: 'number', default: 10, minimum: 1, maximum: 100, description: 'Quantidade de itens por página' }
+				page: {
+					type: 'number', default: 1, minimum: 1, description: 'Página atual'
+				},
+				limit: {
+					type: 'number', default: 10, minimum: 1, maximum: 100, description: 'Quantidade de itens por página'
+				}
 			}
 		},
 		response: {

@@ -23,6 +23,12 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		enum: ['student', 'teacher', 'admin']
+	},
+	phone: {
+		type: String,
+		required: true,
+		minlength: 11,
+		maxlength: 15
 	}
 }, {
 	timestamps: true
