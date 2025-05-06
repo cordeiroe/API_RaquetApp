@@ -26,6 +26,10 @@ export default fp(async function (fastify, options) {
 				{
 					name: 'Auth',
 					description: 'Endpoints de autenticação'
+				},
+				{
+					name: 'Teachers',
+					description: 'Endpoints de professores'
 				}
 			]
 		}
