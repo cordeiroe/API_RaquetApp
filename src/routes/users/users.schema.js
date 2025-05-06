@@ -20,7 +20,8 @@ const userSchema = {
 				password: {
 					type: 'string', minLength: 8, description: 'Senha do usuário', pattern: '^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$'
 				},
-				role: { type: 'string', enum: ['student', 'teacher', 'admin'], description: 'Papel do usuário' }
+				role: { type: 'string', enum: ['student', 'teacher', 'admin'], description: 'Papel do usuário' },
+				phone: { type: 'string', minLength: 11, maxLength: 15, description: 'Telefone do usuário DDD + numero', pattern: '^^[1-9]{2}[0-9]{9}$' }
 			}
 		},
 		response: {
