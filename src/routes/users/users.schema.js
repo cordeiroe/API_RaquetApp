@@ -2,6 +2,7 @@ import { errorResponse } from '../../schemas/common.js'
 
 const userSchema = {
 	createUser: {
+		tags: ['Users'],
 		body: {
 			type: 'object',
 			required: ['name', 'email', 'password', 'role'],
@@ -57,6 +58,7 @@ const userSchema = {
 		}
 	},
 	getUsers: {
+		tags: ['Users'],
 		query: {
 			type: 'object',
 			properties: {
