@@ -2,6 +2,7 @@ import { errorResponse } from '../../schemas/common.js'
 
 const authSchema = {
 	login: {
+		tags: ['Auth'],
 		body: {
 			type: 'object',
 			required: ['email', 'password'],
