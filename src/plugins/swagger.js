@@ -22,6 +22,10 @@ export default fp(async function (fastify, options) {
 				{
 					name: 'Users',
 					description: 'Endpoints de usuários'
+				},
+				{
+					name: 'Auth',
+					description: 'Endpoints de autenticação'
 				}
 			]
 		}
