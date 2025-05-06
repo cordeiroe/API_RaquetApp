@@ -33,7 +33,7 @@ A RaquetMatch API é o backend do aplicativo mobile RaquetMatch, uma plataforma 
 ### Clonando o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/raquet-api.git
+git clone https://github.com/cordeiroe/API_RaquetApp.git
 cd raquet-api
 ```
 
