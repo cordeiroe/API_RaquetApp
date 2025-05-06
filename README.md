@@ -1,7 +1,5 @@
 # RaquetMatch API
 
-![RaquetMatch Logo](https://via.placeholder.com/150x50?text=RaquetMatch)
-
 ## 🎾 Sobre o Projeto
 
 A RaquetMatch API é o backend do aplicativo mobile RaquetMatch, uma plataforma de intermediação entre alunos e professores de esportes de raquete. Esta API gerencia o cadastro de usuários, perfis de professores, buscas geoespaciais, agendamentos de aulas e muito mais.
@@ -152,4 +150,4 @@ Esta API serve como backend para o aplicativo mobile RaquetMatch, disponível pa
 
 ---
 
-Desenvolvido por [Sua Empresa/Equipe] © 2023
+Desenvolvido por Emerson Marques © 2025
