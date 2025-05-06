@@ -79,6 +79,7 @@ const getTeacherProfile = async (request, reply) => {
 		}
 
 		const teacherProfile = await TeacherProfile.findOne({ user: userId })
+			.populate('user', '-password').lean()
 
 		if (!teacherProfile) {
 			return reply.code(404).send({
@@ -152,7 +153,7 @@ const updateTeacherProfile = async (request, reply) => {
 			teacherProfile._id,
 			request.body,
 			{ new: true }
-		)
+		).populate('user', '-password')
 
 		return reply.code(200).send({
 			message: 'Perfil de professor atualizado com sucesso',
@@ -290,6 +291,15 @@ const searchTeacherProfile = async (request, reply) => {
 				}
 
 			])
+
+			teachersProfiles = teachersProfiles.map(teacher => {
+				const userData = teacher.useData && teacher.userData[0]
+				delete teacher.userData
+				return {
+					...teacher,
+					user: userData
+				}
+			})
 		} else {
 			teachersProfiles = await TeacherProfile.find(query).populate('user', '-password')
 		}
